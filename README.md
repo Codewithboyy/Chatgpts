@@ -50,6 +50,41 @@ public class SandboxDriver : MonoBehaviour
 }
 ```
 
+## New to Codex? Quick workflow
+
+1. Ask Codex to make changes (for example: "add a new MonoBehaviour and tests").
+2. Codex edits files.
+3. Codex runs checks/tests it can run in the environment.
+4. Codex commits the changes with a commit message.
+5. Codex prepares a PR message.
+
+If you only see local commits but nothing on GitHub, you still need to push to your remote branch.
+
+## GitHub not updating? (Most common fix)
+
+Run these commands from the repo root:
+
+```bash
+git status
+git remote -v
+git branch --show-current
+git push -u origin "$(git branch --show-current)"
+```
+
+If push fails, check these:
+- You are on the expected branch (`git branch --show-current`).
+- `origin` points to your GitHub repo (`git remote -v`).
+- You are authenticated to GitHub (token/SSH key configured).
+- You are viewing the same branch on GitHub UI (not `main` vs `work` mismatch).
+
+Helpful verification commands:
+
+```bash
+git log --oneline -n 5
+git rev-parse --abbrev-ref HEAD
+git ls-remote --heads origin
+```
+
 ## Add your own MonoBehaviour tests
 
 1. Add scripts under `Assets/Scripts`.
