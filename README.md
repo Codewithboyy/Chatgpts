@@ -12,9 +12,12 @@ This repository is a lightweight Unity project scaffold for writing and testing 
 
 ### 1) Open the project
 
-1. Install **Unity Hub**.
-2. Install **Unity Editor 2022.3.20f1** (or a compatible 2022.3 LTS release).
+1. Install **Unity Hub** from Unity's official download page.
+2. Open Unity Hub and install **Unity Editor 2022.3.20f1** (or a compatible 2022.3 LTS release) from the **Installs** tab.
 3. In Unity Hub, click **Open** and select this repository folder.
+
+> **Important:** Unity Editor is **not installed from GitHub**. GitHub only stores this project files.
+> Install Unity Editor through Unity Hub first, then open this repository as a project.
 
 ### 2) Run the included tests (Editor UI)
 
